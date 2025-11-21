@@ -4,7 +4,8 @@
     "howItWorks": "How It Works",
     "benefits": "Benefits",
     "testimonials": "Testimonials",
-    "download": "Download"
+    "download": "Download",
+    "business": "Own a Business Page"
   },
   "hero": {
     "title": "Your Complete Auto Service Ecosystem",
@@ -100,6 +101,57 @@
     "subtitle": "Download Otogo today and join thousands of drivers who trust us for their automotive needs",
     "cta": "Download Now",
     "comingSoon": "Coming Soon"
+  },
+  "businessContact": {
+    "badge": "For Business Owners",
+    "title": "Launch your verified Otogo business profile",
+    "subtitle": "Connect with the Otogo partnerships team to claim or create an official page for your service center, spare part retail shop, or mobility business. We review every request carefully to preserve marketplace quality.",
+    "cards": {
+      "support": {
+        "title": "Dedicated team",
+        "value": "Partner Success",
+        "description": "Work 1:1 with an onboarding specialist."
+      },
+      "sla": {
+        "title": "Response time",
+        "value": "< 2 business days",
+        "description": "Most requests are approved the same week."
+      },
+      "api": {
+        "title": "API integrations",
+        "value": "Catalog + Bookings",
+        "description": "Sync inventory, locations, and service slots automatically."
+      }
+    },
+    "integration": {
+      "title": "Check live API connectivity",
+      "description": "Our partner API lets you ingest inquiries directly into your CRM or ticketing stack. Run a quick health check before submitting your request.",
+      "cta": "Run health check",
+      "health": "Gateway status: {{status}}"
+    },
+    "form": {
+      "ownerName": "Your full name",
+      "email": "Work email",
+      "phone": "Phone number",
+      "businessName": "Registered business name",
+      "companyName": "Company name",
+      "businessType": "Business category",
+      "tin": "Tax identification number (TIN)",
+      "password": "Password",
+      "repeatPassword": "Repeat password",
+      "locations": "Service locations",
+      "locationsPlaceholder": "e.g. Baku, Sumgait",
+      "website": "Website or social link",
+      "message": "Tell us about your services and goals",
+      "cta": "Send request",
+      "ctaLoading": "Submitting..."
+    },
+    "status": {
+      "submitting": "Submitting your request...",
+      "success": "Thanks! Your request was received. Reference: {{referenceId}}",
+      "error": "We could not submit your request. Try again or email partnerships@otogo.az",
+      "passwordMismatch": "Passwords do not match. Please try again."
+    }
   },
   "footer": {
     "about": "About",

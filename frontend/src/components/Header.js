@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../contexts/ThemeContext';
 import { FiSun, FiMoon, FiGlobe, FiMenu, FiX } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -16,10 +17,10 @@ const Header = () => {
   ];
 
   const navItems = [
-    { key: 'features', href: '#features' },
-    { key: 'howItWorks', href: '#how-it-works' },
-    { key: 'benefits', href: '#benefits' },
-    { key: 'testimonials', href: '#testimonials' },
+    { key: 'features', href: '/#features' },
+    { key: 'howItWorks', href: '/#how-it-works' },
+    { key: 'benefits', href: '/#benefits' },
+    { key: 'testimonials', href: '/#testimonials' },
   ];
 
   const changeLanguage = (lng) => {
@@ -100,6 +101,15 @@ const Header = () => {
               )}
             </button>
 
+            {/* Business Contact CTA */}
+            <Link
+              to="/business-contact"
+              className="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 rounded-lg transition-colors"
+              data-testid="nav-business"
+            >
+              {t('nav.business')}
+            </Link>
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -131,6 +141,14 @@ const Header = () => {
                   {t(`nav.${item.key}`)}
                 </a>
               ))}
+              <Link
+                to="/business-contact"
+                onClick={() => setIsMenuOpen(false)}
+                className="px-4 py-3 text-sm font-semibold text-white text-center bg-primary-600 hover:bg-primary-700 rounded-lg transition-colors"
+                data-testid="mobile-nav-business"
+              >
+                {t('nav.business')}
+              </Link>
             </nav>
           </div>
         )}

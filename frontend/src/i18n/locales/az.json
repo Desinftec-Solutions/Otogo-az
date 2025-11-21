@@ -4,7 +4,8 @@
     "howItWorks": "Necə İşləyir",
     "benefits": "Üstünlüklər",
     "testimonials": "Rəylər",
-    "download": "Yüklə"
+    "download": "Yüklə",
+    "business": "Biznes səhifəsi al"
   },
   "hero": {
     "title": "Sizin Tam Avto Xidmət Ekosisteминiz",
@@ -100,6 +101,57 @@
     "subtitle": "Bu gün Otogo-nu yükləyin və avtomobil ehtiyacları üçün bizə etibar edən minlərlə sürücüyə qoşulun",
     "cta": "İndi Yüklə",
     "comingSoon": "Tezliklə"
+  },
+  "businessContact": {
+    "badge": "Biznes sahibləri üçün",
+    "title": "Təsdiqlənmiş Otogo biznes profilinizi işə salın",
+    "subtitle": "Servis mərkəzi, ehtiyat hissələri mağazası və ya digər mobillik biznesiniz üçün rəsmi səhifə yaratmaq və ya mövcud səhifəni tələb etmək istəyirsiniz? Keyfiyyətli bazanı qorumaq üçün hər müraciəti ayrı-ayrılıqda nəzərdən keçiririk.",
+    "cards": {
+      "support": {
+        "title": "Ayrı-ayrı komanda",
+        "value": "Partnyor meneceri",
+        "description": "Onboarding üzrə mütəxəssislə 1:1 işləyin."
+      },
+      "sla": {
+        "title": "Cavab müddəti",
+        "value": "< 2 iş günü",
+        "description": "Əksər müraciətlər eyni həftə təsdiqlənir."
+      },
+      "api": {
+        "title": "API inteqrasiyası",
+        "value": "Kataloq + rezervasiyalar",
+        "description": "Anbarı, məkanları və xidmət slotlarını avtomatik uyğunlaşdırın."
+      }
+    },
+    "integration": {
+      "title": "Canlı API bağlantısını yoxlayın",
+      "description": "Partnyor API-si sorğuları birbaşa CRM və ya müraciət sisteminizə ötürməyə imkan verir. Formanı göndərmədən əvvəl sürətli sağlamlıq yoxlaması edin.",
+      "cta": "Yoxlama et",
+      "health": "Şlüz statusu: {{status}}"
+    },
+    "form": {
+      "ownerName": "Tam adınız",
+      "email": "İş e-poçtu",
+      "phone": "Telefon nömrəsi",
+      "businessName": "Qeydiyyatda olan biznes adı",
+      "companyName": "Şirkət adı",
+      "businessType": "Biznes kateqoriyası",
+      "tin": "Vergi uçot nömrəsi (VÖEN)",
+      "password": "Şifrə",
+      "repeatPassword": "Şifrəni təkrarlayın",
+      "locations": "Xidmət göstərilən şəhərlər",
+      "locationsPlaceholder": "məs: Bakı, Sumqayıt",
+      "website": "Vebsayt və ya sosial link",
+      "message": "Xidmətləriniz və məqsədləriniz barədə yazın",
+      "cta": "Müraciəti göndər",
+      "ctaLoading": "Göndərilir..."
+    },
+    "status": {
+      "submitting": "Müraciətiniz göndərilir...",
+      "success": "Təşəkkürlər! Sorğunuz qəbul edildi. Referans: {{referenceId}}",
+      "error": "Sorğunu göndərmək mümkün olmadı. Yenidən cəhd edin və ya partnerships@otogo.az ünvanına yazın.",
+      "passwordMismatch": "Şifrələr uyğun gəlmir. Yenidən cəhd edin."
+    }
   },
   "footer": {
     "about": "Haqqında",
