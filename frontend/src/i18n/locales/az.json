@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "features": "Xüsusiyyətlər",
+    "howItWorks": "Necə İşləyir",
+    "benefits": "Üstünlüklər",
+    "testimonials": "Rəylər",
+    "download": "Yüklə"
+  },
+  "hero": {
+    "title": "Sizin Tam Avto Xidmət Ekosisteминiz",
+    "subtitle": "Ehtiyat hissələri, pərakəndə satıcılar və peşəkar avto xidmətləri bir yerdə tapın. Etibarlı bizneslər ilə əlaqə qurun və lazımi xidməti əldə edin.",
+    "cta": "Başla",
+    "ctaSecondary": "Ətraflı"
+  },
+  "features": {
+    "title": "Hər Şey Lazımlı",
+    "subtitle": "Bütün avtomobil ehtiyaclarınız üçün tam ekosistem",
+    "spareParts": {
+      "title": "Ehtiyat Hissələri",
+      "description": "Yoxlanılmış tədarükçülərdən minlərlə orijinal və aftermarket ehtiyat hissələrinə baxın"
+    },
+    "retailers": {
+      "title": "Məhsul Satıcıları",
+      "description": "Keyfiyyətli avtomobil məhsulları və aksesuarları təklif edən etibarlı satıcılarla əlaqə qurun"
+    },
+    "services": {
+      "title": "Avto Xidmətləri",
+      "description": "Yaxınlığınızda peşəkar mexaniklər, emalatxanalar və xidmət mərkəzləri tapın"
+    },
+    "location": {
+      "title": "Məkan Əsaslı",
+      "description": "Dəqiq məkan məlumatı ilə ərazinizdəki biznesləri və xidmətləri kəşf edin"
+    },
+    "contact": {
+      "title": "Birbaşa Əlaqə",
+      "description": "Əlaqə məlumatlarını əldə edin və tətbiq vasitəsilə bizneslərə birbaşa müraciət edin"
+    },
+    "verified": {
+      "title": "Yoxlanılmış Bizneslər",
+      "description": "Keyfiyyət və etibarlılığı təmin etmək üçün bütün bizneslər yoxlanılır"
+    }
+  },
+  "howItWorks": {
+    "title": "Necə İşləyir",
+    "subtitle": "Üç sadə addımda başlayın",
+    "step1": {
+      "title": "Yüklə və Qeydiyyatdan Keç",
+      "description": "Otogo tətbiqini yükləyin və saniyələr içində hesab yaradın"
+    },
+    "step2": {
+      "title": "Axtar və Kəşf Et",
+      "description": "Məkanınıza əsasən xidmətlər, məhsullar və biznesləri nəzərdən keçirin"
+    },
+    "step3": {
+      "title": "Əlaqə Qur və Xidmət Al",
+      "description": "Bizneslərə birbaşa müraciət edin və lazımi xidməti əldə edin"
+    }
+  },
+  "benefits": {
+    "title": "Niyə Otogo?",
+    "subtitle": "Platformamızdan istifadənin üstünlükləri",
+    "comprehensive": {
+      "title": "Əhatəli Verilənlər Bazası",
+      "description": "Minlərlə yoxlanılmış biznes və xidmət təminatçısına çıxış"
+    },
+    "timeSaving": {
+      "title": "Vaxt Qənaəti",
+      "description": "Sonsuz axtarış olmadan lazımlı şeyləri tez tapın"
+    },
+    "trustworthy": {
+      "title": "Etibarlı",
+      "description": "Bütün bizneslər yoxlanılır və icma tərəfindən nəzərdən keçirilir"
+    },
+    "convenient": {
+      "title": "Rahat",
+      "description": "İstifadəsi asan bir mobil tətbiqdə lazım olan hər şey"
+    }
+  },
+  "testimonials": {
+    "title": "Sürücülər Nə Deyir",
+    "subtitle": "Ölkə daxilində minlərlə sürücü tərəfindən etibar edilir",
+    "testimonial1": {
+      "text": "Otogo etibarlı mexanik tapmağı çox asanlaşdırdı. Rəyləri, məkanı görə və birbaşa əlaqə qura bilirəm. Yüksək tövsiyə olunur!",
+      "author": "Rəşad M.",
+      "role": "Peşəkar Sürücü"
+    },
+    "testimonial2": {
+      "text": "Taksi sürücüsü olaraq, ehtiyat hissələri və xidmətlərə sürətli çıxışa ehtiyacım var. Otogo lazım olan hər şeyi bir yerdə təqdim edir. Əla tətbiq!",
+      "author": "Leyla A.",
+      "role": "Taksi Sürücüsü"
+    },
+    "testimonial3": {
+      "text": "Ən yaxşı tərəfi yaxınlıqdakı bütün variantları əlaqə məlumatları ilə görə bilməkdir. Artıq hissə axtarmaq üçün gəzməyə ehtiyac yoxdur.",
+      "author": "Emil K.",
+      "role": "Yük Maşını Sürücüsü"
+    }
+  },
+  "download": {
+    "title": "Başlamağa Hazırsınız?",
+    "subtitle": "Bu gün Otogo-nu yükləyin və avtomobil ehtiyacları üçün bizə etibar edən minlərlə sürücüyə qoşulun",
+    "cta": "İndi Yüklə",
+    "comingSoon": "Tezliklə"
+  },
+  "footer": {
+    "about": "Haqqında",
+    "aboutText": "Otogo ehtiyat hissələri, pərakəndə satıcılar və avto xidmətləri üçün etibarlı ekosisteминizdir. Biz sürücüləri yoxlanılmış bizneslər və xidmət təminatçıları ilə birləşdiririk.",
+    "quickLinks": "Sürətli Keçidlər",
+    "contact": "Əlaqə",
+    "email": "E-poçt",
+    "phone": "Telefon",
+    "rights": "Bütün hüquqlar qorunur."
+  }
+}

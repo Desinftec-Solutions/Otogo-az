@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "benefits": "Benefits",
+    "testimonials": "Testimonials",
+    "download": "Download"
+  },
+  "hero": {
+    "title": "Your Complete Auto Service Ecosystem",
+    "subtitle": "Find spare parts, retailers, and professional auto services all in one place. Connect with trusted businesses and get the service you need.",
+    "cta": "Get Started",
+    "ctaSecondary": "Learn More"
+  },
+  "features": {
+    "title": "Everything You Need",
+    "subtitle": "Discover the complete ecosystem for all your automotive needs",
+    "spareParts": {
+      "title": "Spare Parts",
+      "description": "Browse thousands of genuine and aftermarket spare parts from verified suppliers"
+    },
+    "retailers": {
+      "title": "Product Retailers",
+      "description": "Connect with trusted retailers offering quality automotive products and accessories"
+    },
+    "services": {
+      "title": "Auto Services",
+      "description": "Find professional mechanics, workshops, and service centers near you"
+    },
+    "location": {
+      "title": "Location Based",
+      "description": "Discover businesses and services in your area with accurate location information"
+    },
+    "contact": {
+      "title": "Direct Contact",
+      "description": "Get contact information and reach out to businesses directly through the app"
+    },
+    "verified": {
+      "title": "Verified Businesses",
+      "description": "All businesses are verified to ensure quality and reliability"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Get started in three simple steps",
+    "step1": {
+      "title": "Download & Register",
+      "description": "Download the Otogo app and create your account in seconds"
+    },
+    "step2": {
+      "title": "Search & Discover",
+      "description": "Browse services, products, and businesses based on your location"
+    },
+    "step3": {
+      "title": "Connect & Service",
+      "description": "Contact businesses directly and get the service you need"
+    }
+  },
+  "benefits": {
+    "title": "Why Choose Otogo?",
+    "subtitle": "The advantages of using our platform",
+    "comprehensive": {
+      "title": "Comprehensive Database",
+      "description": "Access to thousands of verified businesses and service providers"
+    },
+    "timeSaving": {
+      "title": "Save Time",
+      "description": "Find what you need quickly without endless searching"
+    },
+    "trustworthy": {
+      "title": "Trustworthy",
+      "description": "All businesses are verified and reviewed by the community"
+    },
+    "convenient": {
+      "title": "Convenient",
+      "description": "Everything you need in one easy-to-use mobile application"
+    }
+  },
+  "testimonials": {
+    "title": "What Drivers Say",
+    "subtitle": "Trusted by thousands of drivers across the country",
+    "testimonial1": {
+      "text": "Otogo made finding a reliable mechanic so much easier. I can see reviews, location, and contact them directly. Highly recommended!",
+      "author": "Rashad M.",
+      "role": "Professional Driver"
+    },
+    "testimonial2": {
+      "text": "As a taxi driver, I need quick access to spare parts and services. Otogo has everything I need in one place. Great app!",
+      "author": "Leyla A.",
+      "role": "Taxi Driver"
+    },
+    "testimonial3": {
+      "text": "The best part is being able to see all options nearby with their contact info. No more driving around looking for parts.",
+      "author": "Emil K.",
+      "role": "Truck Driver"
+    }
+  },
+  "download": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Download Otogo today and join thousands of drivers who trust us for their automotive needs",
+    "cta": "Download Now",
+    "comingSoon": "Coming Soon"
+  },
+  "footer": {
+    "about": "About",
+    "aboutText": "Otogo is your trusted ecosystem for spare parts, product retailers, and auto services. We connect drivers with verified businesses and service providers.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "email": "Email",
+    "phone": "Phone",
+    "rights": "All rights reserved."
+  }
+}
