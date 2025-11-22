@@ -144,13 +144,22 @@
       "website": "Website or social link",
       "message": "Tell us about your services and goals",
       "cta": "Send request",
-      "ctaLoading": "Submitting..."
+      "ctaLoading": "Submitting...",
+      "agreeTo": "I agree to the",
+      "terms": "Terms of Use",
+      "and": "and",
+      "privacy": "Privacy Policy",
+      "termsPrivacy": "I agree to the <0>Terms of Use</0> and <1>Privacy Policy</1>"
     },
     "status": {
       "submitting": "Submitting your request...",
       "success": "Thanks! Your request was received. Reference: {{referenceId}}",
       "error": "We could not submit your request. Try again or email partnerships@otogo.az",
       "passwordMismatch": "Passwords do not match. Please try again."
+    },
+    "legal": {
+      "termsUrl": "/legal/user-agreement-en.pdf",
+      "privacyUrl": "/legal/privacy-policy-en.pdf"
     }
   },
   "footer": {

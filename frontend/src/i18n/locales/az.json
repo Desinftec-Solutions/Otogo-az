@@ -144,13 +144,22 @@
       "website": "Vebsayt və ya sosial link",
       "message": "Xidmətləriniz və məqsədləriniz barədə yazın",
       "cta": "Müraciəti göndər",
-      "ctaLoading": "Göndərilir..."
+      "ctaLoading": "Göndərilir...",
+      "agreeTo": "ilə razıyam",
+      "terms": "İstifadə Şərtləri",
+      "and": "və",
+      "privacy": "Gizlilik Siyasəti",
+      "termsPrivacy": "<0>İstifadə Şərtləri</0> və <1>Gizlilik Siyasəti</1> ilə razıyam"
     },
     "status": {
       "submitting": "Müraciətiniz göndərilir...",
       "success": "Təşəkkürlər! Sorğunuz qəbul edildi. Referans: {{referenceId}}",
       "error": "Sorğunu göndərmək mümkün olmadı. Yenidən cəhd edin və ya partnerships@otogo.az ünvanına yazın.",
       "passwordMismatch": "Şifrələr uyğun gəlmir. Yenidən cəhd edin."
+    },
+    "legal": {
+      "termsUrl": "/legal/user-agreement-az.pdf",
+      "privacyUrl": "/legal/privacy-policy-az.pdf"
     }
   },
   "footer": {
@@ -161,5 +170,9 @@
     "email": "E-poçt",
     "phone": "Telefon",
     "rights": "Bütün hüquqlar qorunur."
+  },
+  "terms": {
+    "title": "İstifadə Şərtləri",
+    "description": ""
   }
 }

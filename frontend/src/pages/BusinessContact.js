@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { 
-  FiBriefcase, 
-  FiMail, 
-  FiPhone, 
-  FiHash, 
-  FiLock, 
-  FiCheckCircle, 
-  FiAlertCircle, 
+import { useTranslation, Trans } from 'react-i18next';
+import {
+  FiBriefcase,
+  FiMail,
+  FiPhone,
+  FiHash,
+  FiLock,
+  FiCheckCircle,
+  FiAlertCircle,
   FiLoader,
   FiHeadphones,
   FiClock,
   FiZap,
-  FiX
+  FiX,
+  FiEye,
+  FiEyeOff
 } from 'react-icons/fi';
-import { submitBusinessInquiry, checkApiHealth } from '../services/api';
+import { submitBusinessInquiry } from '../services/api';
+
 
 const defaultFormState = {
   companyName: '',
@@ -29,7 +32,8 @@ const BusinessContact = () => {
   const { t } = useTranslation();
   const [formState, setFormState] = useState(defaultFormState);
   const [status, setStatus] = useState({ type: 'idle', message: '' });
-  const [health, setHealth] = useState(null);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showRepeatPassword, setShowRepeatPassword] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -75,15 +79,7 @@ const BusinessContact = () => {
     }
   };
 
-  const handleHealthCheck = async () => {
-    resetStatus();
-    try {
-      const apiHealth = await checkApiHealth();
-      setHealth(apiHealth);
-    } catch (error) {
-      setHealth({ status: 'unreachable', message: error.message });
-    }
-  };
+
 
   return (
     <section
@@ -115,15 +111,14 @@ const BusinessContact = () => {
                 { key: 'support', icon: FiHeadphones },
                 { key: 'sla', icon: FiClock }
               ].map(({ key, icon: Icon }, index) => (
-                <div 
-                  key={key} 
+                <div
+                  key={key}
                   className="group relative p-6 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br mb-4 shadow-lg ${
-                    index === 0 
-                      ? 'from-blue-500 to-cyan-500' 
-                      : 'from-purple-500 to-pink-500'
-                  }`}>
+                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br mb-4 shadow-lg ${index === 0
+                    ? 'from-blue-500 to-cyan-500'
+                    : 'from-purple-500 to-pink-500'
+                    }`}>
                     <Icon className="w-5 h-5 text-white" />
                   </div>
                   <h3 className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wide mb-2">
@@ -139,62 +134,7 @@ const BusinessContact = () => {
               ))}
             </div>
 
-            {/* Integration Section */}
-            <div className="relative overflow-hidden rounded-2xl border border-primary-200 dark:border-primary-900 bg-gradient-to-br from-primary-50 via-primary-50/50 to-white dark:from-primary-900/20 dark:via-primary-900/10 dark:to-gray-900 p-6 sm:p-8 space-y-4">
-              <div className="flex items-start space-x-3">
-                <div className="p-2 rounded-lg bg-primary-600 dark:bg-primary-500 shadow-lg">
-                  <FiZap className="w-5 h-5 text-white" />
-                </div>
-                <div className="flex-1 space-y-2">
-                  <h3 className="text-lg font-bold text-primary-900 dark:text-primary-100">
-                    {t('businessContact.integration.title')}
-                  </h3>
-                  <p className="text-sm text-primary-800 dark:text-primary-200 leading-relaxed">
-                    {t('businessContact.integration.description')}
-                  </p>
-                </div>
-              </div>
-              
-              <button
-                onClick={handleHealthCheck}
-                className="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 rounded-xl transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                <FiZap className="w-4 h-4 mr-2" />
-                {t('businessContact.integration.cta')}
-              </button>
-              
-              {health && (
-                <div className={`flex items-start space-x-3 p-4 rounded-xl ${
-                  health.status === 'healthy' 
-                    ? 'bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800'
-                    : 'bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800'
-                }`}>
-                  {health.status === 'healthy' ? (
-                    <FiCheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  ) : (
-                    <FiAlertCircle className="w-5 h-5 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
-                  )}
-                  <div className="flex-1">
-                    <p className={`text-sm font-medium ${
-                      health.status === 'healthy'
-                        ? 'text-green-800 dark:text-green-200'
-                        : 'text-red-800 dark:text-red-200'
-                    }`}>
-                      {t('businessContact.integration.health', { status: health.status })}
-                    </p>
-                    {health.message && (
-                      <p className={`text-xs mt-1 ${
-                        health.status === 'healthy'
-                          ? 'text-green-700 dark:text-green-300'
-                          : 'text-red-700 dark:text-red-300'
-                      }`}>
-                        {health.message}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              )}
-            </div>
+
           </div>
 
           {/* Right Column - Form */}
@@ -293,15 +233,22 @@ const BusinessContact = () => {
                     <div className="relative">
                       <input
                         id="password"
-                        type="password"
+                        type={showPassword ? 'text' : 'password'}
                         name="password"
                         value={formState.password}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 pl-11 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                        className="w-full px-4 py-3 pl-11 pr-12 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                         placeholder={t('businessContact.form.password')}
                       />
                       <FiLock className="absolute left-3.5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500 pointer-events-none" />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute right-3.5 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none transition-colors"
+                      >
+                        {showPassword ? <FiEyeOff className="w-5 h-5" /> : <FiEye className="w-5 h-5" />}
+                      </button>
                     </div>
                   </div>
                   <div className="space-y-2">
@@ -312,16 +259,59 @@ const BusinessContact = () => {
                     <div className="relative">
                       <input
                         id="repeatPassword"
-                        type="password"
+                        type={showRepeatPassword ? 'text' : 'password'}
                         name="repeatPassword"
                         value={formState.repeatPassword}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 pl-11 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                        className="w-full px-4 py-3 pl-11 pr-12 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                         placeholder={t('businessContact.form.repeatPassword')}
                       />
                       <FiLock className="absolute left-3.5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500 pointer-events-none" />
+                      <button
+                        type="button"
+                        onClick={() => setShowRepeatPassword(!showRepeatPassword)}
+                        className="absolute right-3.5 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none transition-colors"
+                      >
+                        {showRepeatPassword ? <FiEyeOff className="w-5 h-5" /> : <FiEye className="w-5 h-5" />}
+                      </button>
                     </div>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <div className="flex items-center h-5">
+                    <input
+                      id="terms"
+                      name="terms"
+                      type="checkbox"
+                      required
+                      className="w-5 h-5 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 transition-colors cursor-pointer"
+                    />
+                  </div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                    <label htmlFor="terms" className="cursor-pointer select-none">
+                      <Trans
+                        i18nKey="businessContact.form.termsPrivacy"
+                        defaults="I agree to the <0>Terms of Use</0> and <1>Privacy Policy</1>"
+                        components={[
+                          <a
+                            key="terms"
+                            href={t('businessContact.legal.termsUrl')}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary-600 hover:text-primary-700 dark:text-primary-400 font-medium underline decoration-primary-600/30 hover:decoration-primary-600 transition-all"
+                          />,
+                          <a
+                            key="privacy"
+                            href={t('businessContact.legal.privacyUrl')}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary-600 hover:text-primary-700 dark:text-primary-400 font-medium underline decoration-primary-600/30 hover:decoration-primary-600 transition-all"
+                          />
+                        ]}
+                      />
+                    </label>
                   </div>
                 </div>
 
@@ -347,13 +337,12 @@ const BusinessContact = () => {
 
                   {status.message && (
                     <div
-                      className={`flex items-start space-x-3 p-4 rounded-xl border transition-all duration-300 ${
-                        status.type === 'error'
-                          ? 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800'
-                          : status.type === 'success'
+                      className={`flex items-start space-x-3 p-4 rounded-xl border transition-all duration-300 ${status.type === 'error'
+                        ? 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800'
+                        : status.type === 'success'
                           ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
                           : 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
-                      }`}
+                        }`}
                     >
                       {status.type === 'error' ? (
                         <FiAlertCircle className="w-5 h-5 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
@@ -361,13 +350,12 @@ const BusinessContact = () => {
                         <FiCheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
                       )}
                       <p
-                        className={`flex-1 text-sm font-medium ${
-                          status.type === 'error'
-                            ? 'text-red-800 dark:text-red-200'
-                            : status.type === 'success'
+                        className={`flex-1 text-sm font-medium ${status.type === 'error'
+                          ? 'text-red-800 dark:text-red-200'
+                          : status.type === 'success'
                             ? 'text-green-800 dark:text-green-200'
                             : 'text-blue-800 dark:text-blue-200'
-                        }`}
+                          }`}
                       >
                         {status.message}
                       </p>
@@ -386,9 +374,10 @@ const BusinessContact = () => {
           </div>
         </div>
       </div>
+
+
     </section>
   );
 };
 
 export default BusinessContact;
-
