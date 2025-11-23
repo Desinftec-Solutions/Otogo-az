@@ -2,6 +2,7 @@
   "name": "otogo-landing",
   "version": "1.0.0",
   "private": true,
+  "proxy": "http://194.163.173.179:3300",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

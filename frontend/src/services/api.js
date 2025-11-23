@@ -1,4 +1,8 @@
-const API_BASE_URL = 'http://194.163.173.179:3300';
+// Determine the API URL based on the environment
+const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const API_BASE_URL = isLocal ? '' : 'http://194.163.173.179:3300';
+
+console.log('API Configuration:', { isLocal, API_BASE_URL, env: process.env.NODE_ENV });
 
 const defaultHeaders = {
   'Content-Type': 'application/json',
