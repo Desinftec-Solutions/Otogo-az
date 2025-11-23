@@ -1,8 +1,11 @@
-// Determine the API URL based on the environment
-const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-const API_BASE_URL = isLocal ? '' : 'http://194.163.173.179:3300';
+// API Base URL configuration
+// In development, we use the proxy configured in setupProxy.js (relative path)
+// In production, we use the full URL
+const API_BASE_URL = process.env.NODE_ENV === 'production'
+  ? 'http://194.163.173.179:3300'
+  : '';
 
-console.log('API Configuration:', { isLocal, API_BASE_URL, env: process.env.NODE_ENV });
+console.log('API Configuration:', { API_BASE_URL, env: process.env.NODE_ENV });
 
 const defaultHeaders = {
   'Content-Type': 'application/json',
