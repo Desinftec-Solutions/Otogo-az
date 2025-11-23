@@ -1,9 +1,7 @@
 // API Base URL configuration
 // In development, we use the proxy configured in setupProxy.js (relative path)
 // In production, we use the full URL
-const API_BASE_URL = process.env.NODE_ENV === 'production'
-  ? 'http://194.163.173.179:3300'
-  : '';
+const API_BASE_URL = '';
 
 console.log('API Configuration:', { API_BASE_URL, env: process.env.NODE_ENV });
 
