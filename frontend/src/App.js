@@ -10,6 +10,7 @@ import Testimonials from './components/Testimonials';
 import DownloadSection from './components/DownloadSection';
 import Footer from './components/Footer';
 import BusinessContact from './pages/BusinessContact';
+import Support from './pages/Support';
 import './i18n/i18n';
 
 const LandingPage = () => (
@@ -33,6 +34,7 @@ function App() {
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/business-contact" element={<BusinessContact />} />
+              <Route path="/support" element={<Support />} />
             </Routes>
           </main>
           <Footer />

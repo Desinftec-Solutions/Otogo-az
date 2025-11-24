@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 
 const Footer = () => {
@@ -11,6 +12,7 @@ const Footer = () => {
     { key: 'howItWorks', href: '#how-it-works' },
     { key: 'benefits', href: '#benefits' },
     { key: 'testimonials', href: '#testimonials' },
+    { key: 'support', href: '/support', isRoute: true },
   ];
 
   return (
@@ -19,9 +21,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* About Section */}
           <div className="space-y-4">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_service-locator-9/artifacts/ayp1qiir_oto%20go.svg" 
-              alt="Otogo Logo" 
+            <img
+              src="https://customer-assets.emergentagent.com/job_service-locator-9/artifacts/ayp1qiir_oto%20go.svg"
+              alt="Otogo Logo"
               className="h-8 w-auto mb-4"
             />
             <h3 className="text-lg font-bold">{t('footer.about')}</h3>
@@ -36,13 +38,23 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.key}>
-                  <a
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                    data-testid={`footer-link-${link.key}`}
-                  >
-                    {t(`nav.${link.key}`)}
-                  </a>
+                  {link.isRoute ? (
+                    <Link
+                      to={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                      data-testid={`footer-link-${link.key}`}
+                    >
+                      {t(`nav.${link.key}`)}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                      data-testid={`footer-link-${link.key}`}
+                    >
+                      {t(`nav.${link.key}`)}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

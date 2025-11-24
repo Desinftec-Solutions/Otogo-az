@@ -21,6 +21,7 @@ const Header = () => {
     { key: 'howItWorks', href: '/#how-it-works' },
     { key: 'benefits', href: '/#benefits' },
     { key: 'testimonials', href: '/#testimonials' },
+    { key: 'support', href: '/support', isRoute: true },
   ];
 
   const changeLanguage = (lng) => {
@@ -34,24 +35,37 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center" data-testid="logo">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_service-locator-9/artifacts/ayp1qiir_oto%20go.svg" 
-              alt="Otogo Logo" 
-              className="h-8 w-auto"
-            />
+            <Link to="/">
+              <img
+                src="https://customer-assets.emergentagent.com/job_service-locator-9/artifacts/ayp1qiir_oto%20go.svg"
+                alt="Otogo Logo"
+                className="h-8 w-auto"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.key}
-                href={item.href}
-                className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                data-testid={`nav-${item.key}`}
-              >
-                {t(`nav.${item.key}`)}
-              </a>
+              item.isRoute ? (
+                <Link
+                  key={item.key}
+                  to={item.href}
+                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  data-testid={`nav-${item.key}`}
+                >
+                  {t(`nav.${item.key}`)}
+                </Link>
+              ) : (
+                <a
+                  key={item.key}
+                  href={item.href}
+                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  data-testid={`nav-${item.key}`}
+                >
+                  {t(`nav.${item.key}`)}
+                </a>
+              )
             ))}
           </nav>
 
@@ -73,11 +87,10 @@ const Header = () => {
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
-                        i18n.language === lang.code
-                          ? 'text-primary-600 dark:text-primary-400 font-medium'
-                          : 'text-gray-700 dark:text-gray-300'
-                      }`}
+                      className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${i18n.language === lang.code
+                        ? 'text-primary-600 dark:text-primary-400 font-medium'
+                        : 'text-gray-700 dark:text-gray-300'
+                        }`}
                       data-testid={`lang-${lang.code}`}
                     >
                       {lang.name}
@@ -131,15 +144,27 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-800" data-testid="mobile-menu">
             <nav className="flex flex-col space-y-2">
               {navItems.map((item) => (
-                <a
-                  key={item.key}
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-                  data-testid={`mobile-nav-${item.key}`}
-                >
-                  {t(`nav.${item.key}`)}
-                </a>
+                item.isRoute ? (
+                  <Link
+                    key={item.key}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                    data-testid={`mobile-nav-${item.key}`}
+                  >
+                    {t(`nav.${item.key}`)}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.key}
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                    data-testid={`mobile-nav-${item.key}`}
+                  >
+                    {t(`nav.${item.key}`)}
+                  </a>
+                )
               ))}
               <Link
                 to="/business-contact"

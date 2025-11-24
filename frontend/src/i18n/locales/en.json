@@ -5,7 +5,8 @@
     "benefits": "Benefits",
     "testimonials": "Testimonials",
     "download": "Download",
-    "business": "Own a Business Page"
+    "business": "Own a Business Page",
+    "support": "Support"
   },
   "hero": {
     "title": "Your Complete Auto Service Ecosystem",
@@ -160,6 +161,32 @@
     "legal": {
       "termsUrl": "/legal/user-agreement-en.pdf",
       "privacyUrl": "/legal/privacy-policy-en.pdf"
+    }
+  },
+  "support": {
+    "title": "How can we help you?",
+    "subtitle": "Find answers to common questions or contact our support team directly.",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How do I register as a driver?",
+      "a1": "Download the app and follow the on-screen instructions to create your account.",
+      "q2": "Is the app free to use?",
+      "a2": "Yes, the app is completely free for drivers to search and connect with businesses.",
+      "q3": "How can I list my business?",
+      "a3": "Visit our Business page and fill out the registration form to get started.",
+      "q4": "How do I reset my password?",
+      "a4": "Tap 'Forgot Password' on the login screen and follow the instructions sent to your email."
+    },
+    "form": {
+      "title": "Contact Support",
+      "name": "Your Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "error": "Failed to send message. Please try again."
     }
   },
   "footer": {

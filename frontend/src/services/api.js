@@ -48,6 +48,29 @@ export const submitBusinessInquiry = async (payload) => {
   }
 };
 
+export const submitSupportInquiry = async (payload) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/support`, {
+      method: 'POST',
+      mode: 'cors',
+      headers: defaultHeaders,
+      body: JSON.stringify(payload),
+    });
+
+    return handleResponse(response);
+  } catch (error) {
+    if (error.name === 'TypeError' && error.message.includes('fetch')) {
+      const detailedError = new Error(
+        `Network error: Unable to connect to ${API_BASE_URL}. ` +
+        `Possible causes: Server is down, CORS issue, or mixed content (HTTPS page trying to access HTTP API).`
+      );
+      detailedError.isNetworkError = true;
+      throw detailedError;
+    }
+    throw error;
+  }
+};
+
 export const checkApiHealth = async () => {
   try {
     const response = await fetch(`${API_BASE_URL}/api/health`, {
