@@ -29,7 +29,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.key}
-              className="group relative p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              className="group relative p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full"
               data-testid={`testimonial-${index + 1}`}
             >
               {/* Rating Stars */}
@@ -45,7 +45,7 @@ const Testimonials = () => {
               </blockquote>
 
               {/* Author */}
-              <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
+              <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mt-auto">
                 <p className="font-bold text-gray-900 dark:text-white" data-testid={`testimonial-${index + 1}-author`}>
                   {t(`testimonials.${testimonial.key}.author`)}
                 </p>
