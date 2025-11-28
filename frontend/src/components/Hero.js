@@ -22,7 +22,7 @@ const Hero = () => {
         <div className="space-y-8 animate-fade-in">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-500/20 backdrop-blur-sm border border-primary-500/30" data-testid="hero-badge">
-            <span className="text-sm font-medium text-white">Your Complete Auto Ecosystem</span>
+            <span className="text-sm font-medium text-white">{t('hero.badge')}</span>
           </div>
 
           {/* Title */}

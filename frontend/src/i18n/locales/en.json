@@ -9,6 +9,7 @@
     "support": "Support"
   },
   "hero": {
+    "badge": "Your Complete Auto Ecosystem",
     "title": "Your Complete Auto Service Ecosystem",
     "subtitle": "Find spare parts, retailers, and professional auto services all in one place. Connect with trusted businesses and get the service you need.",
     "cta": "Get Started",
@@ -88,12 +89,12 @@
     },
     "testimonial2": {
       "text": "As a taxi driver, I need quick access to spare parts and services. Otogo has everything I need in one place. Great app!",
-      "author": "Leyla A.",
+      "author": "Agil A.",
       "role": "Taxi Driver"
     },
     "testimonial3": {
       "text": "The best part is being able to see all options nearby with their contact info. No more driving around looking for parts.",
-      "author": "Emil K.",
+      "author": "Amil A.",
       "role": "Truck Driver"
     }
   },

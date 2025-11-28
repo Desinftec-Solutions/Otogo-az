@@ -5,16 +5,18 @@
     "benefits": "Üstünlüklər",
     "testimonials": "Rəylər",
     "download": "Yüklə",
-    "business": "Biznes səhifəsi al"
+    "business": "Biznes səhifəsi al",
+    "support": "Dəstək"
   },
   "hero": {
-    "title": "Sizin Tam Avto Xidmət Ekosisteминiz",
+    "badge": "Tam Avto Ekosisteminiz",
+    "title": "Tam Avto Xidmət Ekosisteminiz",
     "subtitle": "Ehtiyat hissələri, pərakəndə satıcılar və peşəkar avto xidmətləri bir yerdə tapın. Etibarlı bizneslər ilə əlaqə qurun və lazımi xidməti əldə edin.",
     "cta": "Başla",
     "ctaSecondary": "Ətraflı"
   },
   "features": {
-    "title": "Hər Şey Lazımlı",
+    "title": "Bütün Avtomobil Ehtiyaclarınız",
     "subtitle": "Bütün avtomobil ehtiyaclarınız üçün tam ekosistem",
     "spareParts": {
       "title": "Ehtiyat Hissələri",
@@ -58,7 +60,7 @@
     }
   },
   "benefits": {
-    "title": "Niyə Otogo?",
+    "title": "Niyə Otogo",
     "subtitle": "Platformamızdan istifadənin üstünlükləri",
     "comprehensive": {
       "title": "Əhatəli Verilənlər Bazası",
@@ -87,12 +89,12 @@
     },
     "testimonial2": {
       "text": "Taksi sürücüsü olaraq, ehtiyat hissələri və xidmətlərə sürətli çıxışa ehtiyacım var. Otogo lazım olan hər şeyi bir yerdə təqdim edir. Əla tətbiq!",
-      "author": "Leyla A.",
+      "author": "Aqil Ə.",
       "role": "Taksi Sürücüsü"
     },
     "testimonial3": {
       "text": "Ən yaxşı tərəfi yaxınlıqdakı bütün variantları əlaqə məlumatları ilə görə bilməkdir. Artıq hissə axtarmaq üçün gəzməyə ehtiyac yoxdur.",
-      "author": "Emil K.",
+      "author": "Amil A.",
       "role": "Yük Maşını Sürücüsü"
     }
   },
@@ -160,6 +162,32 @@
     "legal": {
       "termsUrl": "/legal/user-agreement-az.pdf",
       "privacyUrl": "/legal/privacy-policy-az.pdf"
+    }
+  },
+  "support": {
+    "title": "Sizə necə kömək edə bilərik?",
+    "subtitle": "Tez-tez verilən suallara cavab tapın və ya dəstək komandamızla birbaşa əlaqə saxlayın.",
+    "faq": {
+      "title": "Tez-tez Verilən Suallar",
+      "q1": "Sürücü kimi necə qeydiyyatdan keçə bilərəm?",
+      "a1": "Tətbiqi yükləyin və hesabınızı yaratmaq üçün ekrandakı təlimatları izləyin.",
+      "q2": "Tətbiqdən istifadə ödənişsizdir?",
+      "a2": "Bəli, sürücülərin axtarış etməsi və bizneslərlə əlaqə qurması üçün tətbiq tamamilə ödənişsizdir.",
+      "q3": "Biznesimi necə əlavə edə bilərəm?",
+      "a3": "Biznes səhifəmizə daxil olun və başlamaq üçün qeydiyyat formasını doldurun.",
+      "q4": "Şifrəmi necə bərpa edə bilərəm?",
+      "a4": "Giriş ekranında 'Şifrəni unutmusunuz' düyməsinə toxunun və e-poçtunuza göndərilən təlimatları izləyin."
+    },
+    "form": {
+      "title": "Dəstək ilə Əlaqə",
+      "name": "Adınız",
+      "email": "E-poçt Ünvanı",
+      "subject": "Mövzu",
+      "message": "Mesaj",
+      "submit": "Mesajı Göndər",
+      "submitting": "Göndərilir...",
+      "success": "Mesaj uğurla göndərildi! Tezliklə sizinlə əlaqə saxlayacağıq.",
+      "error": "Mesajı göndərmək mümkün olmadı. Zəhmət olmasa yenidən cəhd edin."
     }
   },
   "footer": {
