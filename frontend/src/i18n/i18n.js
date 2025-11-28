@@ -12,7 +12,7 @@ i18n
       az: { translation: az },
       ru: { translation: ru },
     },
-    lng: 'az',
+    lng: localStorage.getItem('i18nextLng') || 'az',
     fallbackLng: 'az',
     interpolation: {
       escapeValue: false,
