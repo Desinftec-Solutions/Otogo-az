@@ -1,7 +1,7 @@
 // API Base URL configuration
 // In development, we use the proxy configured in setupProxy.js (relative path)
 // In production, we use the full URL
-const API_BASE_URL = '';
+const API_BASE_URL = 'https://api.otogo.az';
 
 console.log('API Configuration:', { API_BASE_URL, env: process.env.NODE_ENV });
 
@@ -50,7 +50,7 @@ export const submitBusinessInquiry = async (payload) => {
 
 export const submitSupportInquiry = async (payload) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/support`, {
+    const response = await fetch(`${API_BASE_URL}/api/contacts`, {
       method: 'POST',
       mode: 'cors',
       headers: defaultHeaders,
@@ -63,27 +63,6 @@ export const submitSupportInquiry = async (payload) => {
       const detailedError = new Error(
         `Network error: Unable to connect to ${API_BASE_URL}. ` +
         `Possible causes: Server is down, CORS issue, or mixed content (HTTPS page trying to access HTTP API).`
-      );
-      detailedError.isNetworkError = true;
-      throw detailedError;
-    }
-    throw error;
-  }
-};
-
-export const checkApiHealth = async () => {
-  try {
-    const response = await fetch(`${API_BASE_URL}/api/health`, {
-      method: 'GET',
-      mode: 'cors',
-    });
-    return handleResponse(response);
-  } catch (error) {
-    // Enhanced error handling for health check
-    if (error.name === 'TypeError' && error.message.includes('fetch')) {
-      const detailedError = new Error(
-        `Cannot reach API server at ${API_BASE_URL}. ` +
-        `Check: 1) Server is running, 2) Correct IP:port, 3) Network/firewall access, 4) Mixed content (HTTPS→HTTP blocked)`
       );
       detailedError.isNetworkError = true;
       throw detailedError;

@@ -100,6 +100,27 @@ async def submit_business_inquiry(inquiry: BusinessInquiry):
     }
 
 
+class ContactRequest(BaseModel):
+    fullName: str
+    email: EmailStr
+    subject: str
+    message: str
+
+    @field_validator("fullName", "subject", "message")
+    @classmethod
+    def validate_min_length(cls, value: str) -> str:
+        if len(value.strip()) < 2:
+            raise ValueError("Field is too short.")
+        return value.strip()
+
+
+@app.post("/api/contact")
+async def submit_contact_request(contact: ContactRequest):
+    # In a real app, you would save this to a database or send an email
+    logging.info(f"Received contact request: {contact}")
+    return {"status": "success", "message": "Message received"}
+
+
 @app.get("/api")
 async def root():
     return {"message": "Welcome to Otogo API"}

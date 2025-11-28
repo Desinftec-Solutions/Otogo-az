@@ -16,7 +16,7 @@ import {
 import { submitSupportInquiry } from '../services/api';
 
 const defaultFormState = {
-    name: '',
+    fullName: '',
     email: '',
     subject: '',
     message: '',
@@ -41,7 +41,7 @@ const Support = () => {
 
         try {
             const payload = {
-                name: formState.name.trim(),
+                fullName: formState.fullName.trim(),
                 email: formState.email.trim(),
                 subject: formState.subject.trim(),
                 message: formState.message.trim(),
@@ -146,9 +146,9 @@ const Support = () => {
                                     </label>
                                     <div className="relative">
                                         <input
-                                            id="name"
-                                            name="name"
-                                            value={formState.name}
+                                            id="fullName"
+                                            name="fullName"
+                                            value={formState.fullName}
                                             onChange={handleChange}
                                             required
                                             className="w-full px-4 py-3 pl-11 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
