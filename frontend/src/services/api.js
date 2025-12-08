@@ -1,7 +1,7 @@
 // API Base URL configuration
 // In development, we use the proxy configured in setupProxy.js (relative path)
 // In production, we use the full URL
-const API_BASE_URL = 'https://api.otogo.az';
+const API_BASE_URL = 'https://newapi.otogo.az';
 
 console.log('API Configuration:', { API_BASE_URL, env: process.env.NODE_ENV });
 
