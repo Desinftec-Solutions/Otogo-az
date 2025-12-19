@@ -11,6 +11,7 @@ import DownloadSection from './components/DownloadSection';
 import Footer from './components/Footer';
 import BusinessContact from './pages/BusinessContact';
 import Support from './pages/Support';
+import AppRedirect from './pages/AppRedirect';
 import './i18n/i18n';
 
 const LandingPage = () => (
@@ -24,21 +25,33 @@ const LandingPage = () => (
   </>
 );
 
+const MainLayout = ({ children }) => (
+  <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+    <Header />
+    <main className="pt-20 sm:pt-24">{children}</main>
+    <Footer />
+  </div>
+);
+
 function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
-        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
-          <Header />
-          <main className="pt-20 sm:pt-24">
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/business-contact" element={<BusinessContact />} />
-              <Route path="/support" element={<Support />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+        <Routes>
+          {/* Standalone app redirect page (no header/footer) */}
+          <Route path="/app" element={<AppRedirect />} />
+          
+          {/* Main site with layout */}
+          <Route path="/*" element={
+            <MainLayout>
+              <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/business-contact" element={<BusinessContact />} />
+                <Route path="/support" element={<Support />} />
+              </Routes>
+            </MainLayout>
+          } />
+        </Routes>
       </BrowserRouter>
     </ThemeProvider>
   );
