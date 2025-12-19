@@ -9,11 +9,11 @@
     "support": "Dəstək"
   },
   "hero": {
-    "badge": "Tam Avto Ekosisteminiz",
-    "title": "Tam Avto Xidmət Ekosisteminiz",
-    "subtitle": "Ehtiyat hissələri, pərakəndə satıcılar və peşəkar avto xidmətləri bir yerdə tapın. Etibarlı bizneslər ilə əlaqə qurun və lazımi xidməti əldə edin.",
+    "badge": "Sürücülər üçün",
+    "title": "Ustalar, hissələr, servislər — hamısı bir yerdə",
+    "subtitle": "Maşınına lazım olan hər şeyi Otogo ilə tap. Yaxınlıqdakı ustaları, ehtiyat hissələrini və xidmət mərkəzlərini bir tətbiqdən axtar, birbaşa əlaqə qur.",
     "cta": "Başla",
-    "ctaSecondary": "Ətraflı"
+    "ctaSecondary": "Necə işləyir?"
   },
   "features": {
     "title": "Bütün Avtomobil Ehtiyaclarınız",
@@ -63,37 +63,37 @@
     "title": "Niyə Otogo",
     "subtitle": "Platformamızdan istifadənin üstünlükləri",
     "comprehensive": {
-      "title": "Əhatəli Verilənlər Bazası",
-      "description": "Minlərlə yoxlanılmış biznes və xidmət təminatçısına çıxış"
+      "title": "Geniş Seçim",
+      "description": "Minlərlə etibarlı biznes və usta bir yerdə"
     },
     "timeSaving": {
-      "title": "Vaxt Qənaəti",
-      "description": "Sonsuz axtarış olmadan lazımlı şeyləri tez tapın"
+      "title": "Vaxtına Qənaət",
+      "description": "Axtarışa vaxt itirmə — anında tap"
     },
     "trustworthy": {
       "title": "Etibarlı",
-      "description": "Bütün bizneslər yoxlanılır və icma tərəfindən nəzərdən keçirilir"
+      "description": "Bütün bizneslər yoxlanılır və Komandamız tərəfindən nəzərdən keçirilir"
     },
     "convenient": {
-      "title": "Rahat",
-      "description": "İstifadəsi asan bir mobil tətbiqdə lazım olan hər şey"
+      "title": "Rahatlıq", 
+      "description": "Hər şey bir tətbiqdə — sadə və rahat"
     }
   },
   "testimonials": {
-    "title": "Sürücülər Nə Deyir",
-    "subtitle": "Ölkə daxilində minlərlə sürücü tərəfindən etibar edilir",
+    "title": "Rəylər",
+    "subtitle": "Minlərlə sürücü artıq Otogo istifadəçisidir",
     "testimonial1": {
-      "text": "Otogo etibarlı mexanik tapmağı çox asanlaşdırdı. Rəyləri, məkanı görə və birbaşa əlaqə qura bilirəm. Yüksək tövsiyə olunur!",
+      "text": "Dünən maşının nasosunu dəyişdirməliydim. Otogo-dan baxdım, yaxınlıqda 3-4 yer var idi. Zəng etdim, qiymət aldım, getdim. 1 saata iş bitdi.",
       "author": "Rəşad M.",
       "role": "Peşəkar Sürücü"
     },
     "testimonial2": {
-      "text": "Taksi sürücüsü olaraq, ehtiyat hissələri və xidmətlərə sürətli çıxışa ehtiyacım var. Otogo lazım olan hər şeyi bir yerdə təqdim edir. Əla tətbiq!",
+      "text": "Taksi sürürəm, gündə 10+ saat yoldayam. Əvvəl hissə lazım olanda tanışlardan soruşurdum. İndi Otogo açıram, ən yaxın yeri tapıram, bitdi.",
       "author": "Aqil Ə.",
       "role": "Taksi Sürücüsü"
     },
     "testimonial3": {
-      "text": "Ən yaxşı tərəfi yaxınlıqdakı bütün variantları əlaqə məlumatları ilə görə bilməkdir. Artıq hissə axtarmaq üçün gəzməyə ehtiyac yoxdur.",
+      "text": "TIR sürücüsüyəm, şəhərlərarası gəzirəm. Yolda qalsam, Otogo-dan həmin ərazidə usta tapıram. Əlaqə nömrəsi var, zəng edirəm. Çox kömək edir.",
       "author": "Amil A.",
       "role": "Yük Maşını Sürücüsü"
     }
@@ -192,7 +192,7 @@
   },
   "footer": {
     "about": "Haqqında",
-    "aboutText": "Otogo ehtiyat hissələri, pərakəndə satıcılar və avto xidmətləri üçün etibarlı ekosisteминizdir. Biz sürücüləri yoxlanılmış bizneslər və xidmət təminatçıları ilə birləşdiririk.",
+    "aboutText": "Otogo ehtiyat hissələri, pərakəndə satıcılar və avto xidmətləri üçün etibarlı ekosisteminizdir. Biz, sürücüləri yoxlanılmış bizneslər və xidmət təminatçıları ilə birləşdiririk.",
     "quickLinks": "Sürətli Keçidlər",
     "contact": "Əlaqə",
     "email": "E-poçt",

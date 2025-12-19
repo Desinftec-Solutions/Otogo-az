@@ -66,11 +66,11 @@ const Footer = () => {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center space-x-3">
                 <FiMail className="w-5 h-5" />
-                <span>info@otogo.az</span>
+                <span>otogoapp@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <FiPhone className="w-5 h-5" />
-                <span>+994 12 345 67 89</span>
+                <span>+994 50 880 87 51</span>
               </div>
               <div className="flex items-center space-x-3">
                 <FiMapPin className="w-5 h-5" />

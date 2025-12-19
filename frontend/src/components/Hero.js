@@ -5,6 +5,13 @@ import { FiArrowRight } from 'react-icons/fi';
 const Hero = () => {
   const { t } = useTranslation();
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden" data-testid="hero-section">
       {/* Background Image with Overlay */}
@@ -37,11 +44,19 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4" data-testid="hero-cta">
-            <button className="group px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-2" data-testid="hero-cta-primary">
+            <button 
+              onClick={() => scrollToSection('features')}
+              className="group px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-2" 
+              data-testid="hero-cta-primary"
+            >
               <span>{t('hero.cta')}</span>
               <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl transition-all border border-white/30" data-testid="hero-cta-secondary">
+            <button 
+              onClick={() => scrollToSection('how-it-works')}
+              className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl transition-all border border-white/30" 
+              data-testid="hero-cta-secondary"
+            >
               {t('hero.ctaSecondary')}
             </button>
           </div>
