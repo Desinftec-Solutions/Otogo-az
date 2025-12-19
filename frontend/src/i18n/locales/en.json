@@ -9,11 +9,11 @@
     "support": "Support"
   },
   "hero": {
-    "badge": "Your Complete Auto Ecosystem",
-    "title": "Your Complete Auto Service Ecosystem",
-    "subtitle": "Find spare parts, retailers, and professional auto services all in one place. Connect with trusted businesses and get the service you need.",
+    "badge": "For Drivers",
+    "title": "Mechanics, parts, services — all in one place",
+    "subtitle": "Find everything you need for your car with Otogo. Search nearby mechanics, spare parts, and service centers from one app — connect directly.",
     "cta": "Get Started",
-    "ctaSecondary": "Learn More"
+    "ctaSecondary": "How it works?"
   },
   "features": {
     "title": "Everything You Need",
@@ -63,20 +63,20 @@
     "title": "Why Choose Otogo?",
     "subtitle": "The advantages of using our platform",
     "comprehensive": {
-      "title": "Comprehensive Database",
-      "description": "Access to thousands of verified businesses and service providers"
+      "title": "Wide Selection",
+      "description": "Thousands of trusted businesses and mechanics in one place"
     },
     "timeSaving": {
       "title": "Save Time",
-      "description": "Find what you need quickly without endless searching"
+      "description": "Don't waste time searching — find instantly"
     },
     "trustworthy": {
       "title": "Trustworthy",
       "description": "All businesses are verified and reviewed by the community"
     },
     "convenient": {
-      "title": "Convenient",
-      "description": "Everything you need in one easy-to-use mobile application"
+      "title": "At Your Fingertips",
+      "description": "Everything in one app — simple and convenient"
     }
   },
   "testimonials": {
