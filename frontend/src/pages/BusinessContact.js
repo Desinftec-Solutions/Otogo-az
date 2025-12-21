@@ -296,11 +296,9 @@ const BusinessContact = () => {
                         i18nKey="businessContact.form.termsPrivacy"
                         defaults="I agree to the <0>Terms of Use</0> and <1>Privacy Policy</1>"
                         components={[
-                          <a
+                          <Link
                             key="terms"
-                            href={t('businessContact.legal.termsUrl')}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            to={t('businessContact.legal.termsUrl')}
                             className="text-primary-600 hover:text-primary-700 dark:text-primary-400 font-medium underline decoration-primary-600/30 hover:decoration-primary-600 transition-all"
                           />,
                           <Link

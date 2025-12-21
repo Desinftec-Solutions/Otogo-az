@@ -160,7 +160,7 @@
       "passwordMismatch": "Passwords do not match. Please try again."
     },
     "legal": {
-      "termsUrl": "/legal/user-agreement-en.pdf",
+      "termsUrl": "/user-agreement",
       "privacyUrl": "/privacy-policy"
     }
   },
@@ -241,6 +241,54 @@
     "contactUs": {
       "title": "10. Contact Us",
       "content": "If you have any questions about this Privacy Policy, please contact us:\n\nEmail: otogoapp@gmail.com\nPhone: +994 50 880 87 51\nAddress: Baku, Azerbaijan"
+    }
+  },
+  "userAgreement": {
+    "title": "Terms of Use",
+    "lastUpdated": "Last updated: [Date]",
+    "introduction": {
+      "title": "1. Introduction",
+      "content": "Welcome to Otogo. These Terms of Use (\"Terms\") govern your access to and use of the Otogo mobile application and services (\"Service\"). By accessing or using our Service, you agree to be bound by these Terms.\n\nIf you do not agree to these Terms, please do not use our Service."
+    },
+    "acceptance": {
+      "title": "2. Acceptance of Terms",
+      "content": "By downloading, installing, accessing, or using the Otogo app, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree with any part of these Terms, you must not use the Service."
+    },
+    "accountRegistration": {
+      "title": "3. Account Registration",
+      "content": "To use certain features of the Service, you must register for an account. You agree to:\n\n• Provide accurate, current, and complete information during registration\n• Maintain and promptly update your account information\n• Maintain the security of your password and account\n• Accept responsibility for all activities that occur under your account\n• Notify us immediately of any unauthorized use of your account"
+    },
+    "useOfService": {
+      "title": "4. Use of Service",
+      "content": "You may use the Service to:\n\n• Search for mechanics, spare parts, and auto services\n• Contact businesses and service providers\n• Access location-based services\n• View business information and reviews\n\nYou agree not to:\n\n• Use the Service for any illegal purpose\n• Violate any applicable laws or regulations\n• Infringe upon the rights of others\n• Transmit any harmful or malicious code\n• Interfere with or disrupt the Service"
+    },
+    "userResponsibilities": {
+      "title": "5. User Responsibilities",
+      "content": "You are responsible for:\n\n• All activities conducted through your account\n• Maintaining the confidentiality of your account credentials\n• Ensuring the accuracy of information you provide\n• Complying with all applicable laws and regulations\n• Respecting the rights of other users and businesses\n• Using the Service in a lawful and appropriate manner"
+    },
+    "intellectualProperty": {
+      "title": "6. Intellectual Property",
+      "content": "The Service, including its original content, features, and functionality, is owned by Otogo and is protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.\n\nYou may not reproduce, distribute, modify, create derivative works of, publicly display, or otherwise exploit any part of the Service without our express written permission."
+    },
+    "limitationOfLiability": {
+      "title": "7. Limitation of Liability",
+      "content": "Otogo provides the Service \"as is\" and \"as available\" without warranties of any kind. We do not guarantee that:\n\n• The Service will be uninterrupted or error-free\n• The information provided by businesses is accurate\n• The Service will meet your specific requirements\n\nTo the maximum extent permitted by law, Otogo shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service."
+    },
+    "termination": {
+      "title": "8. Termination",
+      "content": "We may terminate or suspend your account and access to the Service immediately, without prior notice, for any reason, including if you breach these Terms.\n\nYou may terminate your account at any time by contacting us or deleting the app from your device. Upon termination, your right to use the Service will immediately cease."
+    },
+    "changesToAgreement": {
+      "title": "9. Changes to Terms",
+      "content": "We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect.\n\nBy continuing to access or use the Service after any revisions become effective, you agree to be bound by the revised Terms."
+    },
+    "governingLaw": {
+      "title": "10. Governing Law",
+      "content": "These Terms shall be governed by and construed in accordance with the laws of Azerbaijan, without regard to its conflict of law provisions.\n\nAny disputes arising from these Terms or the Service shall be subject to the exclusive jurisdiction of the courts of Azerbaijan."
+    },
+    "contactUs": {
+      "title": "11. Contact Us",
+      "content": "If you have any questions about these Terms of Use, please contact us:\n\nEmail: otogoapp@gmail.com\nPhone: +994 50 880 87 51\nAddress: Baku, Azerbaijan"
     }
   }
 }

@@ -160,7 +160,7 @@
       "passwordMismatch": "Şifrələr uyğun gəlmir. Yenidən cəhd edin."
     },
     "legal": {
-      "termsUrl": "/legal/user-agreement-az.pdf",
+      "termsUrl": "/user-agreement",
       "privacyUrl": "/privacy-policy"
     }
   },
@@ -245,6 +245,54 @@
     "contactUs": {
       "title": "10. Bizimlə Əlaqə",
       "content": "Bu Gizlilik Siyasəti ilə bağlı suallarınız varsa, zəhmət olmasa bizimlə əlaqə saxlayın:\n\nE-poçt: otogoapp@gmail.com\nTelefon: +994 50 880 87 51\nÜnvan: Bakı, Azərbaycan"
+    }
+  },
+  "userAgreement": {
+    "title": "İstifadə Şərtləri",
+    "lastUpdated": "Son yenilənmə: [Tarix]",
+    "introduction": {
+      "title": "1. Giriş",
+      "content": "Otogo-ya xoş gəlmisiniz. Bu İstifadə Şərtləri (\"Şərtlər\") Otogo mobil tətbiqinə və xidmətlərinə (\"Xidmət\") girişinizi və istifadənizi tənzimləyir. Xidmətimizə daxil olmaqla və ya istifadə etməklə, bu Şərtlərə riayət etməyi qəbul edirsiniz.\n\nBu Şərtlərlə razılaşmırsınızsa, zəhmət olmasa Xidmətimizdən istifadə etməyin."
+    },
+    "acceptance": {
+      "title": "2. Şərtlərin Qəbulu",
+      "content": "Otogo tətbiqini yükləyərək, quraşdıraraq, daxil olaraq və ya istifadə edərək, bu Şərtləri və Gizlilik Siyasətimizi oxuduğunuzu, başa düşdüyünüzü və riayət etməyi qəbul etdiyinizi təsdiq edirsiniz. Bu Şərtlərin hər hansı bir hissəsi ilə razılaşmırsınızsa, Xidmətdən istifadə etməməlisiniz."
+    },
+    "accountRegistration": {
+      "title": "3. Hesab Qeydiyyatı",
+      "content": "Xidmətin müəyyən funksiyalarından istifadə etmək üçün hesab qeydiyyatından keçməlisiniz. Razılaşırsınız:\n\n• Qeydiyyat zamanı dəqiq, aktual və tam məlumat təqdim etmək\n• Hesab məlumatlarınızı saxlamaq və vaxtında yeniləmək\n• Şifrənizin və hesabınızın təhlükəsizliyini təmin etmək\n• Hesabınız altında baş verən bütün fəaliyyətlər üçün məsuliyyət daşımaq\n• Hesabınızın icazəsiz istifadəsi barədə dərhal bizə məlumat vermək"
+    },
+    "useOfService": {
+      "title": "4. Xidmətdən İstifadə",
+      "content": "Xidmətdən istifadə edə bilərsiniz:\n\n• Mexaniklər, ehtiyat hissələri və avto xidmətləri axtarmaq\n• Bizneslər və xidmət təminatçıları ilə əlaqə qurmaq\n• Məkan əsaslı xidmətlərə daxil olmaq\n• Biznes məlumatlarını və rəyləri görmək\n\nRazılaşırsınız:\n\n• Xidməti qanunsuz məqsədlər üçün istifadə etməmək\n• Hər hansı tətbiq olunan qanun və ya qaydaları pozmamaq\n• Digərlərinin hüquqlarını pozmamaq\n• Hər hansı zərərli və ya təhlükəli kod ötürməmək\n• Xidmətə müdaxilə etməmək və ya onu pozmamaq"
+    },
+    "userResponsibilities": {
+      "title": "5. İstifadəçi Məsuliyyətləri",
+      "content": "Siz məsuliyyət daşıyırsınız:\n\n• Hesabınız vasitəsilə həyata keçirilən bütün fəaliyyətlər üçün\n• Hesab məlumatlarınızın məxfiliyini qorumaq üçün\n• Təqdim etdiyiniz məlumatların dəqiqliyini təmin etmək üçün\n• Bütün tətbiq olunan qanun və qaydalara riayət etmək üçün\n• Digər istifadəçilərin və bizneslərin hüquqlarına hörmət etmək üçün\n• Xidməti qanuni və münasib şəkildə istifadə etmək üçün"
+    },
+    "intellectualProperty": {
+      "title": "6. İntellektual Mülkiyyət",
+      "content": "Xidmət, o cümlədən onun orijinal məzmunu, xüsusiyyətləri və funksionallığı Otogo-ya məxsusdur və beynəlxalq müəllif hüququ, əmtəə nişanı, patent, ticarət sirri və digər intellektual mülkiyyət qanunları ilə qorunur.\n\nBizim açıq yazılı icazəmiz olmadan Xidmətin hər hansı bir hissəsini çoxaltmaq, paylamaq, dəyişdirmək, törəmə əsərlər yaratmaq, ictimai şəkildə göstərmək və ya başqa şəkildə istifadə edə bilməzsiniz."
+    },
+    "limitationOfLiability": {
+      "title": "7. Məsuliyyətin Məhdudlaşdırılması",
+      "content": "Otogo Xidməti \"olduğu kimi\" və \"mövcud olduğu kimi\" heç bir zəmanət olmadan təqdim edir. Biz zəmanət vermirik ki:\n\n• Xidmət fasiləsiz və ya səhvsiz olacaq\n• Bizneslər tərəfindən təqdim olunan məlumat dəqiqdir\n• Xidmət sizin xüsusi tələblərinizə cavab verəcək\n\nQanunla icazə verilən maksimum dərəcədə, Otogo Xidmətdən istifadənizdən yaranan hər hansı dolayı, təsadüfi, xüsusi, nəticə və ya cəza zərərləri üçün məsuliyyət daşımır."
+    },
+    "termination": {
+      "title": "8. Xitam",
+      "content": "Biz, hər hansı bir səbəbdən, o cümlədən bu Şərtləri pozduğunuz halda, əvvəlcədən xəbərdarlıq etmədən hesabınızı və Xidmətə girişinizi dərhal dayandıra və ya dayandıra bilərik.\n\nHesabınızı istənilən vaxt bizimlə əlaqə saxlayaraq və ya tətbiqi cihazınızdan silməklə dayandıra bilərsiniz. Xitamdan sonra Xidmətdən istifadə hüququnuz dərhal dayanacaq."
+    },
+    "changesToAgreement": {
+      "title": "9. Şərtlərdə Dəyişikliklər",
+      "content": "Biz hər hansı bir vaxt bu Şərtləri dəyişdirmək və ya əvəz etmək hüququnu qoruyuruq. Dəyişiklik əhəmiyyətlidirsə, yeni şərtlərin qüvvəyə minməsindən ən azı 30 gün əvvəl xəbərdarlıq edəcəyik.\n\nHər hansı dəyişikliklər qüvvəyə mindikdən sonra Xidmətə daxil olmağa və ya istifadə etməyə davam etməklə, yenilənmiş Şərtlərə riayət etməyi qəbul edirsiniz."
+    },
+    "governingLaw": {
+      "title": "10. Tətbiq Olunan Qanun",
+      "content": "Bu Şərtlər Azərbaycan qanunlarına uyğun olaraq tənzimlənir və şərh edilir, qanun münaqişəsi müddəaları nəzərə alınmadan.\n\nBu Şərtlərdən və ya Xidmətdən yaranan hər hansı mübahisələr Azərbaycan məhkəmələrinin ekskluziv yurisdiksiyasına tabedir."
+    },
+    "contactUs": {
+      "title": "11. Bizimlə Əlaqə",
+      "content": "Bu İstifadə Şərtləri ilə bağlı suallarınız varsa, zəhmət olmasa bizimlə əlaqə saxlayın:\n\nE-poçt: otogoapp@gmail.com\nTelefon: +994 50 880 87 51\nÜnvan: Bakı, Azərbaycan"
     }
   }
 }

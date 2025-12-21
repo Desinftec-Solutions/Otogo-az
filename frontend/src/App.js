@@ -13,6 +13,7 @@ import BusinessContact from './pages/BusinessContact';
 import Support from './pages/Support';
 import AppRedirect from './pages/AppRedirect';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import UserAgreement from './pages/UserAgreement';
 import './i18n/i18n';
 
 const LandingPage = () => (
@@ -50,6 +51,7 @@ function App() {
                 <Route path="/business-contact" element={<BusinessContact />} />
                 <Route path="/support" element={<Support />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/user-agreement" element={<UserAgreement />} />
               </Routes>
             </MainLayout>
           } />
