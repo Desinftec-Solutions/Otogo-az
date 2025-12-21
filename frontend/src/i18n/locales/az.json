@@ -161,7 +161,7 @@
     },
     "legal": {
       "termsUrl": "/legal/user-agreement-az.pdf",
-      "privacyUrl": "/legal/privacy-policy-az.pdf"
+      "privacyUrl": "/privacy-policy"
     }
   },
   "support": {
@@ -202,5 +202,49 @@
   "terms": {
     "title": "İstifadə Şərtləri",
     "description": ""
+  },
+  "privacyPolicy": {
+    "title": "Gizlilik Siyasəti",
+    "lastUpdated": "Son yenilənmə: [Tarix]",
+    "introduction": {
+      "title": "1. Giriş",
+      "content": "Otogo (\"biz\", \"bizim\" və ya \"bizə\") məlumatlarınızın məxfiliyini qorumağa öhdəyik. Bu Gizlilik Siyasəti mobil tətbiqimizi və xidmətlərimizi istifadə etdikdə məlumatlarınızı necə topladığımızı, istifadə etdiyimizi, açıqladığımızı və qoruduğumuzu izah edir.\n\nOtogo istifadə etməklə, bu siyasətə uyğun olaraq məlumatların toplanması və istifadəsi ilə razılaşırsınız."
+    },
+    "informationWeCollect": {
+      "title": "2. Topladığımız Məlumatlar",
+      "content": "Bizə birbaşa təqdim etdiyiniz məlumatları toplayırıq, o cümlədən:\n\n• Şəxsi Məlumat: Ad, e-poçt ünvanı, telefon nömrəsi və digər əlaqə məlumatları\n• Hesab Məlumatları: İstifadəçi adı, şifrə və profil məlumatları\n• Məkan Məlumatları: Məkan əsaslı funksiyalardan istifadə etdikdə GPS koordinatları və məkan əsaslı məlumatlar\n• İstifadə Məlumatları: Tətbiqdən necə istifadə etdiyiniz haqqında məlumat, o cümlədən axtarış sorğuları, bizneslərlə qarşılıqlı əlaqə və xidmət sorğuları\n• Cihaz Məlumatları: Cihaz növü, əməliyyat sistemi, unikal cihaz identifikatorları və mobil şəbəkə məlumatları"
+    },
+    "howWeUseInformation": {
+      "title": "3. Məlumatlarınızı Necə İstifadə Edirik",
+      "content": "Topladığımız məlumatları aşağıdakı məqsədlər üçün istifadə edirik:\n\n• Xidmətlərimizi təmin etmək, saxlamaq və təkmilləşdirmək\n• Sorğularınızı və əməliyyatlarınızı emal etmək\n• Sizə texniki bildirişlər, yeniləmələr və dəstək mesajları göndərmək\n• Şərhlərinizə, suallarınıza və sorğularınıza cavab vermək\n• Təcrübələri, istifadəni və fəaliyyətləri izləmək və təhlil etmək\n• Təcrübənizi fərdiləşdirmək və təkmilləşdirmək\n• Texniki problemləri və fırıldaqçılıq fəaliyyətini aşkarlamaq, qarşısını almaq və həll etmək"
+    },
+    "dataSharing": {
+      "title": "4. Məlumat Paylaşımı və Açıqlanması",
+      "content": "Məlumatlarınızı aşağıdakı hallarda paylaşa bilərik:\n\n• Xidmət Təminatçıları ilə: Bizim adımızdan xidmətlər göstərən üçüncü tərəf xidmət təminatçıları ilə məlumat paylaşa bilərik\n• Biznes Tərəfdaşları ilə: Platformamız vasitəsilə bizneslərlə əlaqə qurduğunuzda, ünsiyyəti asanlaşdırmaq üçün lazımi məlumatları paylaşırıq\n• Hüquqi Səbəblər üçün: Qanunla tələb olunarsa və ya dövlət orqanlarının etibarlı sorğularına cavab olaraq məlumatları açıqlaya bilərik\n• Biznes Transferləri: Biznesimizin hər hansı birləşməsi, satışı və ya alınması ilə əlaqədar"
+    },
+    "dataSecurity": {
+      "title": "5. Məlumat Təhlükəsizliyi",
+      "content": "Şəxsi məlumatlarınızı qorumaq üçün uyğun texniki və təşkilati təhlükəsizlik tədbirləri tətbiq edirik. Lakin, internet üzərindən ötürmə və ya elektron saxlama metodunun heç biri 100% təhlükəsiz deyil. Məlumatlarınızı qorumaq üçün kommersiya baxımından məqbul vasitələrdən istifadə etməyə çalışsaq da, mütləq təhlükəsizliyi zəmanət verə bilmərik."
+    },
+    "yourRights": {
+      "title": "6. Hüquqlarınız",
+      "content": "Sizin hüquqlarınız:\n\n• Şəxsi məlumatlarınıza daxil olmaq\n• Qeyri-dəqiq və ya natamam məlumatları düzəltmək\n• Şəxsi məlumatlarınızın silinməsini tələb etmək\n• Şəxsi məlumatlarınızın emalına etiraz etmək\n• Emalın məhdudlaşdırılmasını tələb etmək\n• Məlumat portativliyi\n• İstənilən vaxt razılığı geri götürmək\n\nBu hüquqlardan istifadə etmək üçün, zəhmət olmasa \"Bizimlə Əlaqə\" bölməsində verilən məlumatlardan istifadə edərək bizimlə əlaqə saxlayın."
+    },
+    "cookies": {
+      "title": "7. Cookie-lər və İzləmə Texnologiyaları",
+      "content": "Tətbiqimizdə fəaliyyəti izləmək və müəyyən məlumatları saxlamaq üçün cookie-lər və oxşar izləmə texnologiyalarından istifadə edirik. Cihazınızı bütün cookie-ləri rədd etmək və ya cookie göndərildikdə göstərmək üçün təyin edə bilərsiniz."
+    },
+    "childrenPrivacy": {
+      "title": "8. Uşaqların Məxfiliyi",
+      "content": "Xidmətlərimiz 13 yaşdan kiçik uşaqlar üçün nəzərdə tutulmayıb. Biz 13 yaşdan kiçik uşaqlardan qəsdən şəxsi məlumat toplamırıq. Əgər siz valideyn və ya qəyyumsinizsə və uşağınızın bizə şəxsi məlumat verdiyini düşünürsünüzsə, zəhmət olmasa bizimlə əlaqə saxlayın."
+    },
+    "changesToPolicy": {
+      "title": "9. Bu Gizlilik Siyasətində Dəyişikliklər",
+      "content": "Gizlilik Siyasətimizi vaxtaşırı yeniləyə bilərik. Yeni Gizlilik Siyasətini bu səhifədə yerləşdirərək və \"Son yenilənmə\" tarixini yeniləyərək hər hansı dəyişiklik barədə sizi məlumatlandıracağıq. Hər hansı dəyişiklik üçün bu Gizlilik Siyasətini dövri olaraq nəzərdən keçirməyiniz tövsiyə olunur."
+    },
+    "contactUs": {
+      "title": "10. Bizimlə Əlaqə",
+      "content": "Bu Gizlilik Siyasəti ilə bağlı suallarınız varsa, zəhmət olmasa bizimlə əlaqə saxlayın:\n\nE-poçt: otogoapp@gmail.com\nTelefon: +994 50 880 87 51\nÜnvan: Bakı, Azərbaycan"
+    }
   }
 }

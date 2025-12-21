@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import {
   FiBriefcase,
   FiMail,
@@ -302,11 +303,9 @@ const BusinessContact = () => {
                             rel="noopener noreferrer"
                             className="text-primary-600 hover:text-primary-700 dark:text-primary-400 font-medium underline decoration-primary-600/30 hover:decoration-primary-600 transition-all"
                           />,
-                          <a
+                          <Link
                             key="privacy"
-                            href={t('businessContact.legal.privacyUrl')}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            to={t('businessContact.legal.privacyUrl')}
                             className="text-primary-600 hover:text-primary-700 dark:text-primary-400 font-medium underline decoration-primary-600/30 hover:decoration-primary-600 transition-all"
                           />
                         ]}
