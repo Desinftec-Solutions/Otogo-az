@@ -141,6 +141,11 @@
       "tin": "Vergi uçot nömrəsi (VÖEN)",
       "password": "Şifrə",
       "repeatPassword": "Şifrəni təkrarlayın",
+      "passwordRequirements": "Şifrə tələbləri:",
+      "passwordRequirementUppercase": "Böyük hərf",
+      "passwordRequirementLowercase": "Kiçik hərf",
+      "passwordRequirementNumber": "Rəqəm",
+      "passwordRequirementSpecial": "Xüsusi simvol",
       "locations": "Xidmət göstərilən şəhərlər",
       "locationsPlaceholder": "məs: Bakı, Sumqayıt",
       "website": "Vebsayt və ya sosial link",
@@ -157,7 +162,8 @@
       "submitting": "Müraciətiniz göndərilir...",
       "success": "Təşəkkürlər! Sorğunuz qəbul edildi. Referans: {{referenceId}}",
       "error": "Sorğunu göndərmək mümkün olmadı. Yenidən cəhd edin və ya partnerships@otogo.az ünvanına yazın.",
-      "passwordMismatch": "Şifrələr uyğun gəlmir. Yenidən cəhd edin."
+      "passwordMismatch": "Şifrələr uyğun gəlmir. Yenidən cəhd edin.",
+      "passwordRequirements": "Şifrə bütün tələblərə cavab vermir. Zəhmət olmasa, bütün tələbləri yerinə yetirin."
     },
     "legal": {
       "termsUrl": "/user-agreement",

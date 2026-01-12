@@ -141,6 +141,11 @@
       "tin": "ИНН (Идентификационный номер налогоплательщика)",
       "password": "Пароль",
       "repeatPassword": "Повторите пароль",
+      "passwordRequirements": "Требования к паролю:",
+      "passwordRequirementUppercase": "Заглавная буква",
+      "passwordRequirementLowercase": "Строчная буква",
+      "passwordRequirementNumber": "Цифра",
+      "passwordRequirementSpecial": "Специальный символ",
       "locations": "Города обслуживания",
       "locationsPlaceholder": "например, Баку, Сумгаит",
       "website": "Сайт или ссылка в соцсетях",
@@ -157,7 +162,8 @@
       "submitting": "Отправляем вашу заявку...",
       "success": "Спасибо! Заявка получена. Номер: {{referenceId}}",
       "error": "Не удалось отправить форму. Попробуйте еще раз или напишите на partnerships@otogo.az",
-      "passwordMismatch": "Пароли не совпадают. Попробуйте снова."
+      "passwordMismatch": "Пароли не совпадают. Попробуйте снова.",
+      "passwordRequirements": "Пароль не соответствует всем требованиям. Пожалуйста, выполните все требования."
     },
     "legal": {
       "termsUrl": "/user-agreement",

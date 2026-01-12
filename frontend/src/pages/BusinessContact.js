@@ -61,11 +61,32 @@ const BusinessContact = () => {
 
   const resetStatus = () => setStatus({ type: 'idle', message: '' });
 
+  // Password validation functions
+  const checkPasswordRequirements = (password) => {
+    return {
+      hasUppercase: /[A-Z]/.test(password),
+      hasLowercase: /[a-z]/.test(password),
+      hasNumber: /[0-9]/.test(password),
+      hasSpecial: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password),
+    };
+  };
+
+  const passwordRequirements = checkPasswordRequirements(formState.password);
+  const isPasswordValid = Object.values(passwordRequirements).every(Boolean);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     setStatus({ type: 'loading', message: t('businessContact.status.submitting') });
 
     try {
+      if (!isPasswordValid) {
+        setStatus({
+          type: 'error',
+          message: t('businessContact.status.passwordRequirements', 'Password does not meet all requirements'),
+        });
+        return;
+      }
+
       if (formState.password !== formState.repeatPassword) {
         setStatus({
           type: 'error',
@@ -444,6 +465,33 @@ const BusinessContact = () => {
                           {showPassword ? <FiEyeOff className="w-5 h-5" /> : <FiEye className="w-5 h-5" />}
                         </button>
                       </div>
+                      {/* Password Requirements */}
+                      {formState.password && (
+                        <div className="mt-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+                          <p className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            {t('businessContact.form.passwordRequirements')}
+                          </p>
+                          <div className="space-y-1.5">
+                            {[
+                              { key: 'hasUppercase', label: t('businessContact.form.passwordRequirementUppercase') },
+                              { key: 'hasLowercase', label: t('businessContact.form.passwordRequirementLowercase') },
+                              { key: 'hasNumber', label: t('businessContact.form.passwordRequirementNumber') },
+                              { key: 'hasSpecial', label: t('businessContact.form.passwordRequirementSpecial') },
+                            ].map(({ key, label }) => (
+                              <div key={key} className="flex items-center space-x-2 text-xs">
+                                {passwordRequirements[key] ? (
+                                  <FiCheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                                ) : (
+                                  <FiAlertCircle className="w-4 h-4 text-gray-400 flex-shrink-0" />
+                                )}
+                                <span className={passwordRequirements[key] ? 'text-green-600 dark:text-green-400' : 'text-gray-500 dark:text-gray-400'}>
+                                  {label}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="repeatPassword" className="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
