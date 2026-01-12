@@ -22,9 +22,9 @@ const handleResponse = async (response) => {
   return data;
 };
 
-export const submitBusinessInquiry = async (payload) => {
+export const submitBusinessInquiry = async (payload, lang = 'az') => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/businesses`, {
+    const response = await fetch(`${API_BASE_URL}/api/business-companies?lang=${lang}`, {
       method: 'POST',
       mode: 'cors',
       headers: defaultHeaders,
@@ -69,5 +69,51 @@ export const submitSupportInquiry = async (payload) => {
     }
     throw error;
   }
+
 };
 
+export const verifyEmail = async (payload, lang = 'az') => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/email-verifications/verify?lang=${lang}`, {
+      method: 'POST',
+      mode: 'cors',
+      headers: defaultHeaders,
+      body: JSON.stringify(payload),
+    });
+
+    return handleResponse(response);
+  } catch (error) {
+    if (error.name === 'TypeError' && error.message.includes('fetch')) {
+      const detailedError = new Error(
+        `Network error: Unable to connect to ${API_BASE_URL}. ` +
+        `Possible causes: Server is down, CORS issue, or mixed content (HTTPS page trying to access HTTP API).`
+      );
+      detailedError.isNetworkError = true;
+      throw detailedError;
+    }
+    throw error;
+  }
+};
+
+export const resendVerificationEmail = async (payload, lang = 'az') => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/email-verifications/send?lang=${lang}`, {
+      method: 'POST',
+      mode: 'cors',
+      headers: defaultHeaders,
+      body: JSON.stringify(payload),
+    });
+
+    return handleResponse(response);
+  } catch (error) {
+    if (error.name === 'TypeError' && error.message.includes('fetch')) {
+      const detailedError = new Error(
+        `Network error: Unable to connect to ${API_BASE_URL}. ` +
+        `Possible causes: Server is down, CORS issue, or mixed content (HTTPS page trying to access HTTP API).`
+      );
+      detailedError.isNetworkError = true;
+      throw detailedError;
+    }
+    throw error;
+  }
+};
