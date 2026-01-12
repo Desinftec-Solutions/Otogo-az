@@ -260,8 +260,8 @@ const BusinessContact = () => {
                         onClick={handleResend}
                         disabled={!canResend}
                         className={`text-sm font-medium transition-colors ${canResend
-                            ? 'text-primary-600 hover:text-primary-700 cursor-pointer'
-                            : 'text-gray-400 cursor-not-allowed'
+                          ? 'text-primary-600 hover:text-primary-700 cursor-pointer'
+                          : 'text-gray-400 cursor-not-allowed'
                           }`}
                       >
                         {canResend
