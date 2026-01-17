@@ -15,6 +15,11 @@
     "cta": "Başla",
     "ctaSecondary": "Necə işləyir?"
   },
+  "statistics": {
+    "users": "Ümumi İstifadəçilər",
+    "businesses": "Biznes Şirkətləri",
+    "professionals": "Peşəkarlar"
+  },
   "features": {
     "title": "Bütün Avtomobil Ehtiyaclarınız",
     "subtitle": "Bütün avtomobil ehtiyaclarınız üçün tam ekosistem",
@@ -163,7 +168,23 @@
       "success": "Təşəkkürlər! Sorğunuz qəbul edildi. Referans: {{referenceId}}",
       "error": "Sorğunu göndərmək mümkün olmadı. Yenidən cəhd edin və ya partnerships@otogo.az ünvanına yazın.",
       "passwordMismatch": "Şifrələr uyğun gəlmir. Yenidən cəhd edin.",
-      "passwordRequirements": "Şifrə bütün tələblərə cavab vermir. Zəhmət olmasa, bütün tələbləri yerinə yetirin."
+      "passwordRequirements": "Şifrə bütün tələblərə cavab vermir. Zəhmət olmasa, bütün tələbləri yerinə yetirin.",
+      "verifying": "Yoxlanılır...",
+      "verified": "E-poçt uğurla təsdiqləndi! İndi giriş edə bilərsiniz.",
+      "verifyError": "Təsdiqləmə uğursuz oldu. Zəhmət olmasa yenidən cəhd edin.",
+      "resending": "Kod yenidən göndərilir...",
+      "resent": "Təsdiqləmə kodu yenidən göndərildi.",
+      "otpSent": "OTP kodu e-poçtunuza göndərildi."
+    },
+    "verify": {
+      "title": "E-poçtunuzu yoxlayın",
+      "subtitle": "Təsdiqləmə kodunu göndərdik",
+      "codeLabel": "Təsdiqləmə Kodu",
+      "resend": "Kodu yenidən göndər",
+      "resendWait": "{{seconds}} saniyədən sonra yenidən göndər",
+      "verifying": "Yoxlanılır...",
+      "submit": "E-poçtu Təsdiqlə",
+      "back": "Qeydiyyata qayıt"
     },
     "legal": {
       "termsUrl": "/user-agreement",

@@ -15,6 +15,11 @@
     "cta": "Get Started",
     "ctaSecondary": "How it works?"
   },
+  "statistics": {
+    "users": "Total Users",
+    "businesses": "Business Companies",
+    "professionals": "Professionals"
+  },
   "features": {
     "title": "Everything You Need",
     "subtitle": "Discover the complete ecosystem for all your automotive needs",
@@ -163,7 +168,23 @@
       "success": "Thanks! Your request was received. Reference: {{referenceId}}",
       "error": "We could not submit your request. Try again or email partnerships@otogo.az",
       "passwordMismatch": "Passwords do not match. Please try again.",
-      "passwordRequirements": "Password does not meet all requirements. Please fulfill all requirements."
+      "passwordRequirements": "Password does not meet all requirements. Please fulfill all requirements.",
+      "verifying": "Verifying...",
+      "verified": "Email verified successfully! You can now log in.",
+      "verifyError": "Verification failed. Please try again.",
+      "resending": "Resending code...",
+      "resent": "Verification code sent again.",
+      "otpSent": "OTP code has been sent to your email."
+    },
+    "verify": {
+      "title": "Check your email",
+      "subtitle": "We sent a verification code to",
+      "codeLabel": "Verification Code",
+      "resend": "Resend Code",
+      "resendWait": "Resend code in {{seconds}}s",
+      "verifying": "Verifying...",
+      "submit": "Verify Email",
+      "back": "Back to Registration"
     },
     "legal": {
       "termsUrl": "/user-agreement",

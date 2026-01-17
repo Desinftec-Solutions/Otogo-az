@@ -45,7 +45,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4" data-testid="hero-cta">
             <button 
-              onClick={() => scrollToSection('features')}
+              onClick={() => scrollToSection('statistics')}
               className="group px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-2" 
               data-testid="hero-cta-primary"
             >

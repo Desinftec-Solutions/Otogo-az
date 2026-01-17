@@ -117,3 +117,38 @@ export const resendVerificationEmail = async (payload, lang = 'az') => {
     throw error;
   }
 };
+
+export const getStatistics = async () => {
+  try {
+    // Use relative path in development (via proxy) or full URL in production
+    const apiUrl = process.env.NODE_ENV === 'development' 
+      ? '/api/stats' 
+      : `${API_BASE_URL}/api/stats`;
+    
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      mode: 'cors',
+      headers: defaultHeaders,
+    });
+
+    if (!response.ok) {
+      // If API fails, return fallback values
+      console.warn('Statistics API returned non-OK status, using fallback values');
+      return {
+        totalUsers: 178,
+        totalBusinessCompanies: 4,
+        totalProfessionals: 2,
+      };
+    }
+
+    return handleResponse(response);
+  } catch (error) {
+    console.error('Error fetching statistics, using fallback values:', error);
+    // Return fallback values if API call fails
+    return {
+      totalUsers: 178,
+      totalBusinessCompanies: 4,
+      totalProfessionals: 2,
+    };
+  }
+};

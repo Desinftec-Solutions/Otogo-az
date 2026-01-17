@@ -116,14 +116,14 @@ const BusinessContact = () => {
 
       const result = await submitBusinessInquiry(payload, i18n.language);
 
-      setStatus({
-        type: 'success',
-        message: result.message || t('businessContact.status.success'),
-      });
       // Switch to verification step
       setStep('verify');
       setTimer(60);
       setCanResend(false);
+      setStatus({
+        type: 'success',
+        message: t('businessContact.status.otpSent', 'OTP code has been sent to your email.'),
+      });
 
     } catch (error) {
       setStatus({

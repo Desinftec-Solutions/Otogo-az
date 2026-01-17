@@ -121,6 +121,19 @@ async def submit_contact_request(contact: ContactRequest):
     return {"status": "success", "message": "Message received"}
 
 
+@app.get("/api/stats")
+async def get_statistics():
+    """
+    Returns platform statistics.
+    In a real app, these would be fetched from a database.
+    """
+    return {
+        "totalUsers": 178,
+        "totalBusinessCompanies": 4,
+        "totalProfessionals": 2,
+    }
+
+
 @app.get("/api")
 async def root():
     return {"message": "Welcome to Otogo API"}

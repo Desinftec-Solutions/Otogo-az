@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Statistics from './components/Statistics';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import Benefits from './components/Benefits';
@@ -19,6 +20,7 @@ import './i18n/i18n';
 const LandingPage = () => (
   <>
     <Hero />
+    <Statistics />
     <Features />
     <HowItWorks />
     <Benefits />
