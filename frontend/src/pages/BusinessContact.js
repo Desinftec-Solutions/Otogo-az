@@ -12,7 +12,6 @@ import {
   FiLoader,
   FiHeadphones,
   FiClock,
-  FiZap,
   FiX,
   FiEye,
   FiEyeOff
@@ -67,7 +66,7 @@ const BusinessContact = () => {
       hasUppercase: /[A-Z]/.test(password),
       hasLowercase: /[a-z]/.test(password),
       hasNumber: /[0-9]/.test(password),
-      hasSpecial: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password),
+      hasSpecial: /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password),
     };
   };
 
@@ -114,7 +113,7 @@ const BusinessContact = () => {
         repeatPassword: formState.repeatPassword,
       };
 
-      const result = await submitBusinessInquiry(payload, i18n.language);
+      await submitBusinessInquiry(payload, i18n.language);
 
       // Switch to verification step
       setStep('verify');
