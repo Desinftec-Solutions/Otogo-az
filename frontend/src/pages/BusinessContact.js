@@ -40,7 +40,6 @@ const BusinessContact = () => {
   const [otpCode, setOtpCode] = useState('');
   const [timer, setTimer] = useState(60);
   const [canResend, setCanResend] = useState(false);
-  const [isVerified, setIsVerified] = useState(false);
 
   useEffect(() => {
     let interval;
@@ -164,7 +163,6 @@ const BusinessContact = () => {
       const isCompleted = response.completed === true;
       
       // Mark as verified and hide the OTP form
-      setIsVerified(true);
       setStep('verified');
       
       setStatus({
@@ -284,7 +282,6 @@ const BusinessContact = () => {
                       type="button"
                       onClick={() => {
                         setStep('register');
-                        setIsVerified(false);
                         setFormState(defaultFormState);
                         setStatus({ type: 'idle', message: '' });
                       }}
