@@ -36,10 +36,11 @@ const BusinessContact = () => {
   const [showRepeatPassword, setShowRepeatPassword] = useState(false);
 
   // New state for verification step
-  const [step, setStep] = useState('register'); // 'register' | 'verify'
+  const [step, setStep] = useState('register'); // 'register' | 'verify' | 'verified'
   const [otpCode, setOtpCode] = useState('');
   const [timer, setTimer] = useState(60);
   const [canResend, setCanResend] = useState(false);
+  const [isVerified, setIsVerified] = useState(false);
 
   useEffect(() => {
     let interval;
@@ -140,18 +141,41 @@ const BusinessContact = () => {
     setStatus({ type: 'loading', message: t('businessContact.status.verifying', 'Verifying...') });
 
     try {
-      await verifyEmail({
+      const response = await verifyEmail({
         email: formState.email,
         code: otpCode
       }, i18n.language);
 
+      // Store authentication tokens if provided
+      if (response.token) {
+        localStorage.setItem('authToken', response.token);
+      }
+      if (response.refreshToken) {
+        localStorage.setItem('refreshToken', response.refreshToken);
+      }
+      if (response.userType) {
+        localStorage.setItem('userType', response.userType);
+      }
+      if (response.id) {
+        localStorage.setItem('userId', response.id.toString());
+      }
+
+      // Check if registration is completed
+      const isCompleted = response.completed === true;
+      
+      // Mark as verified and hide the OTP form
+      setIsVerified(true);
+      setStep('verified');
+      
       setStatus({
         type: 'success',
-        message: t('businessContact.status.verified', 'Email verified successfully! You can now log in.')
+        message: isCompleted 
+          ? t('businessContact.status.verified', 'Email verified successfully! Your registration is complete.')
+          : t('businessContact.status.verified', 'Email verified successfully! You can now log in.')
       });
-      // Optionally reset form or redirect here
-      // setFormState(defaultFormState);
-      // setStep('register');
+      
+      // Reset OTP code after successful verification
+      setOtpCode('');
 
     } catch (error) {
       setStatus({
@@ -242,7 +266,35 @@ const BusinessContact = () => {
           <div className="lg:sticky lg:top-24">
             <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-800 p-8 sm:p-10">
 
-              {step === 'verify' ? (
+              {step === 'verified' ? (
+                <div className="space-y-6 text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 mb-6">
+                    <FiCheckCircle className="w-10 h-10" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    {t('businessContact.verify.successTitle', 'Email Verified!')}
+                  </h2>
+                  <div className="p-6 rounded-xl bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
+                    <p className="text-green-800 dark:text-green-200 font-medium">
+                      {status.message || t('businessContact.status.verified', 'Email verified successfully! You can now log in.')}
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setStep('register');
+                        setIsVerified(false);
+                        setFormState(defaultFormState);
+                        setStatus({ type: 'idle', message: '' });
+                      }}
+                      className="text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium underline"
+                    >
+                      {t('businessContact.verify.back', 'Back to Registration')}
+                    </button>
+                  </div>
+                </div>
+              ) : step === 'verify' ? (
                 <form className="space-y-6" onSubmit={handleVerify}>
                   <div className="text-center mb-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 mb-4">
@@ -308,28 +360,12 @@ const BusinessContact = () => {
                       </>
                     )}
                   </button>
-                  {status.message && (
+                  {status.message && status.type === 'error' && (
                     <div
-                      className={`flex items-start space-x-3 p-4 rounded-xl border transition-all duration-300 ${status.type === 'error'
-                        ? 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800'
-                        : status.type === 'success'
-                          ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
-                          : 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
-                        }`}
+                      className={`flex items-start space-x-3 p-4 rounded-xl border transition-all duration-300 bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800`}
                     >
-                      {status.type === 'error' ? (
-                        <FiAlertCircle className="w-5 h-5 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
-                      ) : (
-                        <FiCheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                      )}
-                      <p
-                        className={`flex-1 text-sm font-medium ${status.type === 'error'
-                          ? 'text-red-800 dark:text-red-200'
-                          : status.type === 'success'
-                            ? 'text-green-800 dark:text-green-200'
-                            : 'text-blue-800 dark:text-blue-200'
-                          }`}
-                      >
+                      <FiAlertCircle className="w-5 h-5 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
+                      <p className="flex-1 text-sm font-medium text-red-800 dark:text-red-200">
                         {status.message}
                       </p>
                       <button

@@ -118,14 +118,9 @@ export const resendVerificationEmail = async (payload, lang = 'az') => {
   }
 };
 
-export const getStatistics = async () => {
+export const getStatistics = async (lang = 'az') => {
   try {
-    // Use relative path in development (via proxy) or full URL in production
-    const apiUrl = process.env.NODE_ENV === 'development' 
-      ? '/api/stats' 
-      : `${API_BASE_URL}/api/stats`;
-    
-    const response = await fetch(apiUrl, {
+    const response = await fetch(`${API_BASE_URL}/api/users/count?lang=${lang}`, {
       method: 'GET',
       mode: 'cors',
       headers: defaultHeaders,
@@ -135,9 +130,9 @@ export const getStatistics = async () => {
       // If API fails, return fallback values
       console.warn('Statistics API returned non-OK status, using fallback values');
       return {
-        totalUsers: 178,
-        totalBusinessCompanies: 4,
-        totalProfessionals: 2,
+        totalUsers: 0,
+        totalBusinessCompanies: 0,
+        totalProfessionals: 0,
       };
     }
 
@@ -146,9 +141,9 @@ export const getStatistics = async () => {
     console.error('Error fetching statistics, using fallback values:', error);
     // Return fallback values if API call fails
     return {
-      totalUsers: 178,
-      totalBusinessCompanies: 4,
-      totalProfessionals: 2,
+      totalUsers: 0,
+      totalBusinessCompanies: 0,
+      totalProfessionals: 0,
     };
   }
 };

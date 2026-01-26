@@ -4,7 +4,7 @@ import { FiUsers, FiBriefcase, FiUserCheck } from 'react-icons/fi';
 import { getStatistics } from '../services/api';
 
 const Statistics = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [stats, setStats] = useState({
     totalUsers: 0,
     totalBusinessCompanies: 0,
@@ -15,7 +15,7 @@ const Statistics = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const data = await getStatistics();
+        const data = await getStatistics(i18n.language);
         setStats({
           totalUsers: data.totalUsers || 0,
           totalBusinessCompanies: data.totalBusinessCompanies || 0,
@@ -30,7 +30,7 @@ const Statistics = () => {
     };
 
     fetchStats();
-  }, []);
+  }, [i18n.language]);
 
   const statistics = [
     {
