@@ -1,0 +1,15 @@
+{
+  "buildCommand": "cd frontend && yarn install && yarn build",
+  "outputDirectory": "frontend/build",
+  "installCommand": "cd frontend && yarn install",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "http://194.163.173.179:3300/api/:path*"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
