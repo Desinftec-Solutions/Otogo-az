@@ -24,3 +24,5 @@ yarn-error.log*
 
 # package manager lock files (using yarn)
 package-lock.json
+**/package-lock.json
+node_modules/.package-lock.json
